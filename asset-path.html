@@ -35,11 +35,16 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overscroll-behavior-y: none;
+      background: var(--page);
+    }
     body {
       margin: 0;
       min-width: 0;
       overflow-x: hidden;
+      overscroll-behavior-y: none;
       color: var(--ink);
       background:
         radial-gradient(circle at 10% 0%, rgb(50 118 211 / 8%), transparent 28rem),
@@ -51,7 +56,7 @@
     main {
       width: min(100%, 1120px);
       margin: 0 auto;
-      padding: 0 16px 112px;
+      padding: 0 16px calc(61px + var(--safe-bottom));
     }
 
     section {
@@ -474,6 +479,7 @@
     }
 
     .final-card {
+      margin-bottom: 0;
       padding: 18px;
       border-color: #c9d8e8;
       background: linear-gradient(145deg, #fff, #f4f8fc);
@@ -533,6 +539,7 @@
     }
 
     @media (min-width: 1024px) {
+      main { padding-bottom: 76px; }
       .scenario-grid { grid-template-columns: repeat(4, 1fr); }
       .context-grid { grid-template-columns: repeat(3, 1fr); }
       .risk-grid { grid-template-columns: repeat(3, 1fr); }
