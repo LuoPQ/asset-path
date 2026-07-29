@@ -1,0 +1,24 @@
+{
+  "name": "资产恢复路线图",
+  "short_name": "资产路线图",
+  "description": "4.5 万美元到 70 万美元的多场景资产恢复路线图",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f6fb",
+  "theme_color": "#102a56",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

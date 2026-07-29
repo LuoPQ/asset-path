@@ -6,6 +6,10 @@ on:
       - main
     paths:
       - asset-path.html
+      - apple-touch-icon.png
+      - icon-192.png
+      - icon-512.png
+      - site.webmanifest
       - .github/workflows/deploy-asset-path.yml
   workflow_dispatch:
 
@@ -28,16 +32,20 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Prepare static site
         run: |
           mkdir -p _site
           cp asset-path.html _site/index.html
           cp asset-path.html _site/asset-path.html
+          cp apple-touch-icon.png _site/apple-touch-icon.png
+          cp icon-192.png _site/icon-192.png
+          cp icon-512.png _site/icon-512.png
+          cp site.webmanifest _site/site.webmanifest
           touch _site/.nojekyll
 
       - name: Upload GitHub Pages artifact
